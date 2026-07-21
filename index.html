@@ -4,8 +4,8 @@
 <script>document.documentElement.className='js';</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ulaman Retreat × Balicopter — Helicopter Tours &amp; Transfers</title>
-<meta name="description" content="Exclusive helicopter tours and transfers for guests of Ulaman Retreat, in partnership with Balicopter — Bali's first carbon-neutral helicopter operator." />
+<title>Ulaman Eco Luxury Resort × Balicopter — Helicopter Tours &amp; Transfers</title>
+<meta name="description" content="Private helicopter tours and transfers for guests of Ulaman Eco Luxury Resort — bespoke aerial journeys across Bali, tailored to your stay." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -424,6 +424,58 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
 .mountain-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
 .mountain-band .mb-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 6vw;background:linear-gradient(180deg,rgba(38,34,27,.34),rgba(38,34,27,.10) 42%,rgba(38,34,27,.46))}
 .mountain-band .mb-overlay p{color:var(--cream);font-family:'Americana','Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3.6vw,2.8rem);line-height:1.25;max-width:22ch;text-shadow:0 2px 22px rgba(0,0,0,.4)}
+
+/* ---------- TRANSFERS ---------- */
+.vip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.vip-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:transform .3s ease,box-shadow .3s ease}
+.vip-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.vip-tag{display:inline-block;font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--sky-ink);background:var(--sky-soft);padding:5px 12px;border-radius:20px;margin-bottom:16px}
+.vip-card h3{font-size:1.24rem;margin-bottom:6px}
+.vip-note{font-size:.86rem;color:var(--slate);margin-bottom:18px}
+.vip-price{border-top:1px solid var(--line);padding-top:16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.vip-price .vip-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--slate-2)}
+.vip-price strong{font-family:'Americana','Cormorant Garamond',Georgia,serif;font-size:1.4rem;color:var(--ink);font-weight:600}
+.tr-title{text-align:center;font-size:clamp(1.15rem,2.2vw,1.55rem);margin:64px 0 20px}
+.tr-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+.tr-table{width:100%;border-collapse:collapse;min-width:560px}
+.tr-table th{background:var(--sky);color:var(--ink);text-align:left;font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;padding:14px 20px}
+.tr-table td{padding:14px 20px;font-size:.92rem;color:var(--slate);border-top:1px solid var(--line)}
+.tr-table tbody tr:nth-child(even){background:var(--bg-soft)}
+.tr-table td:nth-child(2){white-space:nowrap;color:var(--slate-2)}
+.tr-table td:last-child{font-family:'Americana','Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--ink);white-space:nowrap}
+.tr-cta{display:flex;justify-content:center;margin-top:32px}
+
+/* ---------- TOUR CARD -> LIGHTBOX ---------- */
+.tour-slide{position:relative}
+.tour-slide img{cursor:zoom-in}
+.tour-slide::before{content:"922  Click to enlarge";position:absolute;top:14px;right:14px;z-index:3;background:rgba(38,34,27,.85);color:var(--cream);font-size:.7rem;letter-spacing:.05em;font-weight:600;padding:7px 13px;border-radius:30px;opacity:0;transition:opacity .25s ease;pointer-events:none}
+.tour-slide:hover::before{opacity:1}
+@media(hover:none){.tour-slide::before{opacity:.9}}
+/* readable, scrollable lightbox for full-page documents */
+.lb{align-items:flex-start;justify-content:center;overflow-y:auto;padding:44px 18px}
+.lb img{max-width:min(940px,94vw);width:100%;height:auto;max-height:none;margin:auto;cursor:default;border-radius:10px}
+.lb .close{position:fixed;top:18px;right:26px;z-index:1001;width:44px;height:44px;display:grid;place-items:center;background:rgba(38,34,27,.75);border-radius:50%;font-size:1.6rem}
+
+/* ---------- FEATURE PILLS (replaces number stats) ---------- */
+.stats .container{display:block;padding:46px 0}
+.feature-pills{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:0;padding:0}
+.feature-pills li{display:flex;align-items:center;gap:12px;border:1px solid rgba(244,239,232,.28);border-radius:40px;padding:13px 26px;color:var(--cream);font-size:.92rem;line-height:1.35;transition:border-color .25s ease,background .25s ease}
+.feature-pills li:hover{border-color:var(--sky);background:rgba(198,156,77,.08)}
+.feature-pills .dot{width:7px;height:7px;border-radius:50%;background:var(--sky);flex:0 0 auto}
+@media(max-width:560px){.feature-pills{gap:10px}.feature-pills li{font-size:.84rem;padding:11px 18px;gap:10px}}
+
+/* ---------- BIGGER TRANSFER PRICES ---------- */
+.tr-table td:last-child{font-size:1.28rem;line-height:1.25;letter-spacing:.01em}
+.tr-table td{padding:16px 20px}
+@media(max-width:560px){.tr-table td:last-child{font-size:1.12rem}}
+
+/* ---------- VIP TRANSFER CARD PHOTOS ---------- */
+.vip-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.vip-photo{aspect-ratio:16/9;overflow:hidden;background:var(--bg-soft-2)}
+.vip-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.vip-card:hover .vip-photo img{transform:scale(1.05)}
+.vip-body{padding:26px 28px 30px;display:flex;flex-direction:column;flex:1}
+.vip-body .vip-price{margin-top:auto}
 </style>
 </head>
 <body>
@@ -431,16 +483,14 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#home" class="brand" aria-label="Ulaman Retreat">
-      <img src="images/ulaman-logo-new.svg" alt="Ulaman Retreat — helicopter tours with Balicopter" class="brand-logo" />
+    <a href="#home" class="brand" aria-label="Ulaman Eco Luxury Resort">
+      <img src="images/ulaman-logo-new.svg" alt="Ulaman Eco Luxury Resort — helicopter tours with Balicopter" class="brand-logo" />
     </a>
     <nav class="links" id="navlinks">
-      <a href="#story">Story</a>
-      <a href="#experiences">Experiences</a>
       <a href="#tours">Tours</a>
+      <a href="#transfers">Transfers</a>
       <a href="#locations">Locations</a>
       <a href="#fleet">Fleet</a>
-      <a href="#safety">Safety</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="https://wa.me/6281130075555" target="_blank" rel="noopener" class="nav-cta">Book a Flight</a>
@@ -453,10 +503,10 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
   <div class="hero-bg"><img decoding="async" fetchpriority="high" src="images/hero-heli.jpeg" alt="Balicopter helicopter in flight over Bali" /></div>
   <div class="container hero-inner">
     <h1 class="reveal in d1">The Sky is<br/>Our Canvas
-      <span>Exclusive helicopter tours and transfers for guests of Ulaman Retreat — in partnership with Balicopter, tailored to your stay and executed without compromise.</span>
+      <span>Private helicopter tours and seamless transfers for guests of Ulaman Eco Luxury Resort — Bali from above, tailored to your stay.</span>
     </h1>
     <div class="hero-actions reveal in d2">
-      <a href="#experiences" class="btn btn-primary">Explore Experiences
+      <a href="#tours" class="btn btn-primary">Explore Tours
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a href="#fleet" class="btn btn-ghost">Meet the Fleet</a>
@@ -468,32 +518,13 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
 <!-- ===== STATS ===== -->
 <section class="stats">
   <div class="container">
-    <div class="stat"><div class="num">4</div><div class="lbl">Factory-Fresh Aircraft</div></div>
-    <div class="stat"><div class="num">3</div><div class="lbl">Private Helipads</div></div>
-    <div class="stat"><div class="num">15</div><div class="lbl">Licensed HLOs</div></div>
-    <div class="stat"><div class="num">100%</div><div class="lbl">Carbon-Neutral Flights</div></div>
-  </div>
-</section>
-
-<!-- ===== STORY ===== -->
-<section class="section" id="story">
-  <div class="container split">
-    <div class="split-media reveal">
-      <img loading="lazy" decoding="async" src="images/canvas-view.jpeg" alt="Guest photographing the Bali coastline from the cabin" />
-      <div class="badge">
-        <span class="leaf">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3a9d5d" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
-        </span>
-        <div><b>Bali's First Carbon-Neutral Operator</b><small>Every flight funds active reforestation</small></div>
-      </div>
-    </div>
-    <div class="prose reveal d1">
-      <span class="eyebrow">Ulaman × Balicopter</span>
-      <h2 class="title">A Partnership Written in the Sky</h2>
-      <p>Since <strong>January 2025</strong>, Ulaman Retreat has partnered with Balicopter — Bali's premier private helicopter operator — to give our in-house guests an entirely new vantage point on the island. What begins at the retreat now extends into the sky: <strong>bespoke aerial tours and seamless transfers</strong>, arranged around your stay and executed without compromise.</p>
-      <p>Every flight departs from a private helipad moments from Ulaman, aboard a factory-fresh fleet maintained to the highest international aviation standards, flown by pilots holding the top certifications in the field.</p>
-      <p>Together we share a single conviction: that the highest luxury is one the earth can sustain. Balicopter is Bali's first carbon-neutral helicopter operator, and every flight funds active reforestation across the archipelago — a promise that sits naturally alongside Ulaman's own commitment to regenerative hospitality.</p>
-    </div>
+    <ul class="feature-pills reveal">
+        <li><span class="dot"></span>Brand-new helicopter fleet</li>
+        <li><span class="dot"></span>International safety standards</li>
+        <li><span class="dot"></span>World-class professional pilots</li>
+        <li><span class="dot"></span>Landing options at any location</li>
+        <li><span class="dot"></span>Best price guarantee</li>
+    </ul>
   </div>
 </section>
 
@@ -503,87 +534,96 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
   <div class="mb-overlay"><p>Where the island rises to meet the sky.</p></div>
 </section>
 
-<!-- ===== MILESTONES ===== -->
-<section class="section section--soft" id="milestones">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Our Aviation Partner</span>
-      <h2 class="title">Balicopter's Track Record</h2>
-      <p class="lead">The helicopter service behind your stay is operated by Balicopter. This is the milestone journey that made them Ulaman's partner of choice — from a single helicopter to a factory-fresh fleet spanning coastlines, craters and archipelagos.</p>
-    </div>
-    <div class="timeline">
-      <div class="tl-line"></div>
-      <div class="tl-item reveal">
-        <span class="tl-year">2022</span>
-        <p>It began with a single helicopter and a single question: what does Bali look like from above?</p>
-      </div>
-      <div class="tl-item reveal d1">
-        <span class="tl-year">2024</span>
-        <p>Every guest who flew — every investor, every visiting partner — emerged changed. The single aircraft became two fleets. Bali, known intimately at ground level, revealed something from altitude that no map, no road, no beach could offer: precise, purposeful, and largely unseen.</p>
-      </div>
-      <div class="tl-item reveal d2">
-        <span class="tl-year">2025</span>
-        <p>Balicopter operates three private helipads and four factory-fresh helicopters — the Bell 505 and Robinson R66. In January, Ulaman Retreat joins as an exclusive hospitality partner, bringing bespoke helicopter tours and transfers to its guests.</p>
-      </div>
-    </div>
-    <div class="milestone-imgs reveal d1">
-      <img loading="lazy" decoding="async" src="images/milestone-hangar.jpeg" alt="Robinson helicopter at authorised dealer hangar" />
-      <img loading="lazy" decoding="async" src="images/milestone-cockpit.jpeg" alt="Guest capturing the view from the cockpit" />
-    </div>
-  </div>
-</section>
-
-<!-- ===== EXPERIENCES ===== -->
-<section class="section" id="experiences">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Signature Experiences</span>
-      <h2 class="title">Every Journey, Arranged Around You</h2>
-      <p class="lead">From private transfers to once-in-a-lifetime celebrations — designed on your time, above the rest.</p>
-    </div>
-
-    <div class="exp-grid" style="margin-top:52px">
-      <a href="#tours" class="exp-card exp-card--link reveal" aria-label="View all 5 helicopter tour routes"><img loading="lazy" decoding="async" src="images/exp-tour.jpeg" alt="Private helicopter tour over the volcanoes of Bali" /><div class="cap"><h4>Private Tour &amp; Transfer</h4><span>View all 5 helicopter routes →</span></div></a>
-      <div class="exp-card reveal d1"><img loading="lazy" decoding="async" src="images/exp-birthday.jpeg" alt="Birthday celebration at the helipad" /><div class="cap"><h4>Birthday Celebrations</h4><span>A milestone from altitude</span></div></div>
-      <div class="exp-card reveal d2"><img loading="lazy" decoding="async" src="images/exp-picnic.jpeg" alt="Curated luxury picnic" /><div class="cap"><h4>Unique Picnics</h4><span>Curated, secluded, unforgettable</span></div></div>
-    </div>
-
-    <div class="exp-quote reveal">
-      <span class="mk">&ldquo;</span>
-      <p>Every journey is arranged around you. On your time, above the rest.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ===== TOURS ===== -->
 <section class="section section--soft" id="tours">
   <div class="container">
     <div class="center reveal">
-      <span class="eyebrow">Helicopter Tours · from Canggu</span>
+      <span class="eyebrow">Helicopter Tours · from Nuanu</span>
       <h2 class="title">Choose Your Route</h2>
-      <p class="lead">Five signature helicopter routes, each a private charter for up to four guests — from a 35-minute coastal loop to a 100-minute island-and-volcano epic.</p>
+      <p class="lead">Six signature routes, each a private charter for up to four guests — from a 25-minute glide over the rice terraces that cradle Ulaman, to a 100-minute crossing to Java's Blue Fire.</p>
     </div>
     <div class="tours-slides">
       <figure class="tour-slide reveal">
-        <img src="images/tourpage-1-canggu-uluwatu.jpeg" alt="Canggu & Uluwatu: A Tale of Two Coastlines — 35 minutes, private charter IDR 30,250,000" loading="lazy" decoding="async" />
+        <img src="images/tour-01-rice-terrace.jpeg" alt="Ulaman Rice Terrace Tour — 25 minutes, private charter IDR 26,480,000" loading="lazy" decoding="async" />
         <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about this tour<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </figure>
       <figure class="tour-slide reveal d1">
-        <img src="images/tourpage-2-four-islands.jpeg" alt="Four Islands Perfect Tour — 65 minutes, private charter IDR 47,800,000" loading="lazy" decoding="async" />
+        <img src="images/tour-02-coast-cliffs.jpeg" alt="Ulaman Signature Tour, Where Coast meet Cliffs — 35 minutes, private charter IDR 30,250,000" loading="lazy" decoding="async" />
         <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about this tour<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </figure>
       <figure class="tour-slide reveal d2">
-        <img src="images/tourpage-3-volcanoes-islands.jpeg" alt="Volcanoes and Islands — 85 minutes, private charter IDR 59,500,000" loading="lazy" decoding="async" />
+        <img src="images/tour-03-nusa-islands.jpeg" alt="Bali & the Nusa Islands, A Grand Southern Circuit — 65 minutes, private charter IDR 47,800,000" loading="lazy" decoding="async" />
         <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about this tour<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </figure>
       <figure class="tour-slide reveal">
-        <img src="images/tourpage-4-all-bali.jpeg" alt="All Bali Tour — 100 minutes, private charter IDR 68,500,000" loading="lazy" decoding="async" />
+        <img src="images/tour-04-volcanoes-temples.jpeg" alt="Nusa Penida, Volcanoes & Temples — 85 minutes, private charter IDR 59,500,000" loading="lazy" decoding="async" />
         <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about this tour<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </figure>
       <figure class="tour-slide reveal d1">
-        <img src="images/tourpage-5-ijen.jpeg" alt="Ijen Tour — 100 minutes, private charter IDR 68,500,000" loading="lazy" decoding="async" />
+        <img src="images/tour-05-ultimate-bali.jpeg" alt="Ultimate Bali Aerial Tour — 100 minutes, private charter IDR 68,500,000" loading="lazy" decoding="async" />
         <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about this tour<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </figure>
+      <figure class="tour-slide reveal d2">
+        <img src="images/tour-06-ijen.jpeg" alt="East Java: Blue Fire Ijen Crater — 100 minutes, private charter IDR 68,500,000" loading="lazy" decoding="async" />
+        <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about this tour<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRANSFERS ===== -->
+<section class="section" id="transfers">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Helicopter Transfers</span>
+      <h2 class="title">Arrive by Air</h2>
+      <p class="lead">Skip the traffic entirely. Private helicopter transfers from the Nuanu helipad — to the airport, across the island, or out to the islands beyond.</p>
+    </div>
+
+    <div class="vip-grid reveal">
+      <div class="vip-card">
+        <div class="vip-photo"><img src="images/transfer-airport.jpeg" alt="Ngurah Rai International Airport terminal, Bali" loading="lazy" decoding="async" /></div>
+        <div class="vip-body">
+        <span class="vip-tag">VIP Airport Transfer</span>
+        <h3>Transfer via Airport</h3>
+        <p class="vip-note">Direct to Ngurah Rai International · car transfer included</p>
+        <div class="vip-price"><span class="vip-label">Special price</span><strong>IDR 56,780,000</strong></div>
+        </div>
+      </div>
+      <div class="vip-card">
+        <div class="vip-photo"><img src="images/transfer-benoa.jpeg" alt="Guests arriving by private car and boarding a Balicopter helicopter at the helipad" loading="lazy" decoding="async" /></div>
+        <div class="vip-body">
+        <span class="vip-tag">VIP Airport Transfer</span>
+        <h3>Transfer via Benoa</h3>
+        <p class="vip-note">Via Benoa helipad · car transfer included</p>
+        <div class="vip-price"><span class="vip-label">Special price</span><strong>IDR 27,480,000</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="tr-title reveal">Ulaman Signature Transfers — from the Nuanu Helipad</h3>
+    <div class="tr-wrap reveal">
+      <table class="tr-table">
+        <thead>
+          <tr><th>Route</th><th>Flight time</th><th>Private transfer rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nuanu → Airport Ngurah Rai</td><td>10 min</td><td>IDR 56,780,000</td></tr>
+          <tr><td>Nuanu → Airport (via Benoa Helipad)</td><td>10 min</td><td>IDR 28,080,000</td></tr>
+          <tr><td>Nuanu → Ubud (Kuber Adventure)</td><td>10 min</td><td>IDR 29,540,000</td></tr>
+          <tr><td>Nuanu → Jatiluwih Area (Jatiluwih Ecofarm)</td><td>10 min</td><td>IDR 28,210,000</td></tr>
+          <tr><td>Nuanu → Nusa Dua (JAG Helipad)</td><td>15 min</td><td>IDR 26,550,000</td></tr>
+          <tr><td>Nuanu → Gili Trawangan</td><td>40 min</td><td>IDR 58,990,000</td></tr>
+          <tr><td>Nuanu → Nusa Penida East (Semaya)</td><td>30 min</td><td>IDR 45,230,000</td></tr>
+          <tr><td>Nuanu → Nusa Penida West (Kelingking)</td><td>25 min</td><td>IDR 42,630,000</td></tr>
+          <tr><td>Nuanu → Nusa Lembongan</td><td>22 min</td><td>IDR 40,080,000</td></tr>
+          <tr><td>Nuanu → Menjangan Area</td><td>30 min</td><td>IDR 58,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tours-note">All rates are per helicopter for up to 4 guests, one way. Flight times are on-board time and may vary with weather and air traffic.</p>
+    <div class="tr-cta reveal">
+      <a class="tour-cta" href="https://wa.me/6281130075555" target="_blank" rel="noopener">Enquire about a transfer<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -666,73 +706,50 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
   <div class="container">
     <div class="center reveal">
       <span class="eyebrow">The Fleet</span>
-      <p class="lead">Two factory-fresh helicopters, maintained to the highest international aviation standards.</p>
+      <h2 class="title">Factory-Fresh, Without Exception</h2>
+      <p class="lead">Every aircraft delivered new and maintained to the highest international aviation standards.</p>
     </div>
-    <div class="fleet-slide reveal">
-      <img src="images/fleet-slide.jpeg" alt="The fleet — Robinson R66 and Bell 505, specifications and photos" loading="lazy" decoding="async" />
-    </div>
-  </div>
-</section>
 
-<!-- ===== SAFETY / TRUST ===== -->
-<section class="section" id="safety">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Compliance</span>
-      <h2 class="title">Every Document. Every Inspection. No Exceptions.</h2>
-      <p class="lead">Fully licensed, insured, and airworthy — operating under Indonesian civil aviation authority.</p>
-    </div>
-    <div class="cert-grid" style="margin-top:52px">
-      <div class="cert-card reveal">
-        <div class="cert-thumb" data-full="images/cert-registration.jpeg"><img loading="lazy" decoding="async" src="images/cert-registration.jpeg" alt="Official Business Registration certificate" /></div>
-        <div class="cert-body"><h4>Official Business Registration</h4><p>PT Nebesa Nusantara Utama is the aviation management company operating across Indonesia and owner of the Balicopter Tours &amp; Charters trademark.</p></div>
-      </div>
-      <div class="cert-card reveal d1">
-        <div class="cert-thumb" data-full="images/cert-aoc.jpeg"><img loading="lazy" decoding="async" src="images/cert-aoc.jpeg" alt="Air Operator Certificate" /></div>
-        <div class="cert-body"><h4>AOC — Air Operator Certificate</h4><p>Official approval issued by the national aviation authority permitting the operation of aircraft for commercial purposes.</p></div>
-      </div>
-      <div class="cert-card reveal d2">
-        <div class="cert-thumb" data-full="images/cert-insurance.jpeg"><img loading="lazy" decoding="async" src="images/cert-insurance.jpeg" alt="Helicopter All Risk Insurance certificate" /></div>
-        <div class="cert-body"><h4>Helicopter All-Risk Insurance</h4><p>Comprehensive hull and third-party liability coverage across the entire fleet, current and continuously maintained.</p></div>
-      </div>
-      <div class="cert-card reveal d3">
-        <div class="cert-thumb" data-full="images/cert-airworthiness.jpeg"><img loading="lazy" decoding="async" src="images/cert-airworthiness.jpeg" alt="Certificate of Airworthiness" /></div>
-        <div class="cert-body"><h4>Certificate of Airworthiness</h4><p>Each aircraft certified airworthy to standard by the Directorate General of Civil Aviation.</p></div>
+    <!-- Robinson 66 -->
+    <div class="fleet-block reveal">
+      <div class="fleet-grid">
+        <div class="fleet-info">
+          <h3>Robinson R66</h3>
+          <div class="reg">PK-VPN (2022) · PK-VPX (2023) · PK-VPY (2025)</div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Cruise Speed</span><span class="v">Up to 110 kn (204 km/h)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>Max Range</span><span class="v">≈ 350 nm (650 km)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M2 21a7 7 0 0 1 14 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 21a5 5 0 0 1 6 0"/></svg>Capacity</span><span class="v">1 pilot + up to 4 pax</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Baggage</span><span class="v">18 ft³ · 136 kg</span></div>
+          <p class="spec-note">*Subject to configuration and payload.</p>
+        </div>
+        <div class="fleet-gallery">
+          <img loading="lazy" decoding="async" src="images/r66-1.jpeg" alt="Robinson R66 on the helipad" />
+          <img loading="lazy" decoding="async" src="images/r66-2.jpeg" alt="Robinson R66 in flight" />
+          <img loading="lazy" decoding="async" src="images/r66-3.jpeg" alt="Bose aviation headset in cabin" />
+          <img loading="lazy" decoding="async" src="images/r66-4.jpeg" alt="Robinson R66 cockpit" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section class="section" id="reviews">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Guest Stories</span>
-      <h2 class="title">What They Said About Us</h2>
-    </div>
-    <div class="reviews" style="margin-top:44px">
-      <div class="review reveal">
-        <span class="qmark">&rdquo;</span>
-        <div class="stars">★★★★★</div>
-        <p>Thank you so much for the incredible emotions. We flew twice and really loved it. We chose the route over the ocean — the experience was unbelievable, the beach, the ocean, the waves. Simply magical. The service was also excellent: we were greeted, the rules were explained, everything was clear and easy to understand.</p>
-        <div class="who"><span class="av">M</span><div><b>Mia R</b><small>Ocean Route</small></div></div>
+    <!-- Bell 505 -->
+    <div class="fleet-block rev reveal">
+      <div class="fleet-grid">
+        <div class="fleet-info">
+          <h3>Bell 505</h3>
+          <div class="reg">PK-DJG (2024)</div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Cruise Speed</span><span class="v">125 kn (231 km/h)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>Max Range</span><span class="v">306 nm (567 km)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M2 21a7 7 0 0 1 14 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 21a5 5 0 0 1 6 0"/></svg>Capacity</span><span class="v">1 pilot + up to 4 pax</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Baggage</span><span class="v">288 kg</span></div>
+          <p class="spec-note">*Subject to configuration and payload.</p>
+        </div>
+        <div class="fleet-gallery">
+          <img loading="lazy" decoding="async" src="images/bell-1.jpeg" alt="Bell 505 side profile" />
+          <img loading="lazy" decoding="async" src="images/bell-2.jpeg" alt="Bell 505 front view" />
+          <img loading="lazy" decoding="async" src="images/bell-3.jpeg" alt="Bell 505 cabin seating" />
+          <img loading="lazy" decoding="async" src="images/bell-4.jpeg" alt="Bell 505 glass cockpit avionics" />
+        </div>
       </div>
-      <div class="review reveal d1">
-        <span class="qmark">&rdquo;</span>
-        <div class="stars">★★★★★</div>
-        <p>I really enjoyed the flight! Everything was organised at the highest level — great safety briefing, polite and friendly staff. For flights over Bali and the best experiences, it's only with you!</p>
-        <div class="who"><span class="av">I</span><div><b>Irina O</b><small>Bali Scenic Flight</small></div></div>
-      </div>
-      <div class="review reveal d2">
-        <span class="qmark">&rdquo;</span>
-        <div class="stars">★★★★★</div>
-        <p>My husband and I were absolutely thrilled with the flight programme to Nusa Penida with a picnic! Everything was so beautiful, magical, and well-coordinated that we thought — this must be a dream. You couldn't come up with a better anniversary programme with so many wow-moments. To the organisers — you did an amazing job. Thank you!</p>
-        <div class="who"><span class="av">A</span><div><b>Anastasia M</b><small>Nusa Penida Picnic</small></div></div>
-      </div>
-    </div>
-    <div class="reviews-strip reveal">
-      <img loading="lazy" decoding="async" src="images/testimonials-bg.jpeg" alt="Aerial view of the Bali coastline" />
-      <div class="ov"><p>The highest luxury is one the earth can sustain.</p></div>
     </div>
   </div>
 </section>
@@ -741,9 +758,9 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
 <section class="contact" id="contact">
   <div class="container contact-grid">
     <div class="contact-left">
-      <div class="brand-lg"><img src="images/ulaman-logo-new.svg" alt="Ulaman Retreat" class="brand-logo" /></div>
+      <div class="brand-lg"><img src="images/ulaman-logo-new.svg" alt="Ulaman Eco Luxury Resort" class="brand-logo" /></div>
       <h2>Arrange Your Flight</h2>
-      <p class="sub">Guests of Ulaman Retreat can arrange bespoke helicopter tours and transfers directly — reach out and we'll tailor the experience to your stay.</p>
+      <p class="sub">Guests of Ulaman Eco Luxury Resort can arrange bespoke helicopter tours and transfers directly — reach out and we'll tailor the experience to your stay.</p>
 
       <div class="c-block">
         <h4>Contact</h4>
@@ -752,14 +769,7 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
         </div>
       </div>
     </div>
-  </div>
-  <div class="contact-right"><img loading="lazy" decoding="async" src="images/contact.jpeg" alt="Bali rice terraces at golden hour" /></div>
-
-  <div class="footbar">
-    <div class="container">
-      <span>© 2026 Ulaman Retreat × Balicopter. Helicopter services operated by Balicopter (PT Nebesa Nusantara Utama).</span>
-      <span>Bali's first carbon-neutral helicopter operator.</span>
-    </div>
+    <div class="contact-right"><img loading="lazy" decoding="async" src="images/contact.jpeg" alt="Bali rice terraces at golden hour" /></div>
   </div>
 </section>
 
@@ -819,7 +829,8 @@ const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg
 const openLb = src => { lbImg.src = src; lb.classList.add('open'); document.body.style.overflow='hidden'; };
 const closeLb = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
 document.querySelectorAll('.cert-thumb').forEach(t => t.addEventListener('click', () => openLb(t.dataset.full)));
-document.querySelectorAll('.hlo-grid img, .fleet-gallery img').forEach(i => i.addEventListener('click', () => openLb(i.src)));
+document.querySelectorAll('.hlo-grid img, .fleet-gallery img, .tour-slide img').forEach(i => i.addEventListener('click', () => openLb(i.src)));
+lbImg.addEventListener('click', e => e.stopPropagation());  // clicking the document shouldn't close it
 lb.addEventListener('click', closeLb);
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeLb(); });
