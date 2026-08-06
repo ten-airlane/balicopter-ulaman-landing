@@ -71,8 +71,8 @@ header.nav{
 header.nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:14px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;flex-direction:column;line-height:1}
-.brand-logo{height:46px;width:auto;display:block}
-.contact-left .brand-logo{height:62px;margin-bottom:2px}
+.brand-logo{height:66px;width:auto;display:block}
+.contact-left .brand-logo{height:92px;margin-bottom:2px}
 .brand .name{
   font-family:'Americana','Cormorant Garamond',Georgia,serif;font-weight:700;font-size:1.32rem;letter-spacing:.14em;
   color:#fff;transition:color .35s ease;
@@ -483,6 +483,9 @@ header.nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink);border
 .vip-body .vip-price{margin-top:auto}
 
 .vip-body .tour-cta{margin-top:20px}
+
+@media(max-width:960px){.brand-logo{height:56px}}
+@media(max-width:560px){.brand-logo{height:48px}.contact-left .brand-logo{height:74px}}
 </style>
 </head>
 <body>
